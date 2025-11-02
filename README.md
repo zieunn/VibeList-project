@@ -61,4 +61,4 @@ iTunes Open API를 활용해 실시간으로 곡 데이터를 불러오며, Pool
 
 
 ## 실행 화면
-![메인 화면](<img width="1440" height="900" alt="screenshots:main-ui" src="https://github.com/user-attachments/assets/7969963e-c604-4ce0-bf30-6ebf88868d59" />)
+<img width="1440" height="900" alt="screenshots:main-ui" src="https://github.com/user-attachments/assets/7969963e-c604-4ce0-bf30-6ebf88868d59" />
