@@ -12,7 +12,7 @@ export const DEFAULT_STATIONS = {
 
 export const WELCOME_MESSAGE = {
   title: 'VibeList Radio',
-  subtitle: '끝없는 여름 사운드트랙',
+  subtitle: '사운드트랙',
   description: '당신만의 라디오 스테이션',
 };
 
