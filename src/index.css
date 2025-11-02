@@ -1,0 +1,321 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Poppins:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --butter: #EFDE9C;
+  --cool-gray: #F6F6F6;
+  --gray: #727272;
+  --dark-bg: #2a2a2a;
+  --darker-bg: #1a1a1a;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--darker-bg);
+}
+
+.retro-title {
+  font-family: 'Righteous', cursive;
+  text-shadow: 0 2px 10px rgba(239, 222, 156, 0.3);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(239, 222, 156, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(239, 222, 156, 0.6);
+  }
+}
+
+.glow-effect {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* 턴테이블 효과 */
+@keyframes vinyl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vinyl-record {
+  animation: vinyl-spin 4s linear infinite;
+}
+
+@keyframes tonearm-play {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+.tonearm {
+  animation: tonearm-play 3s ease-in-out infinite;
+  transform-origin: top left;
+}
+
+@keyframes subtle-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.subtle-glow {
+  animation: subtle-pulse 4s ease-in-out infinite;
+}
+
+@keyframes smooth-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.smooth-spin {
+  animation: smooth-rotate 20s linear infinite;
+}
+
+@keyframes wave-gentle {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.gentle-wave {
+  animation: wave-gentle 4s ease-out infinite;
+}
+
+/* 클럽 라이트빔 효과 */
+@keyframes light-beam-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.light-beam-container {
+  animation: light-beam-rotate 8s linear infinite;
+}
+
+@keyframes beam-pulse {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scaleY(1.1);
+  }
+}
+
+.light-beam {
+  animation: beam-pulse 2s ease-in-out infinite;
+}
+
+@keyframes spotlight-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spotlight {
+  animation: spotlight-rotate 10s linear infinite;
+}
+
+@keyframes flash-strobe {
+  0%, 45%, 55%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.strobe-flash {
+  animation: flash-strobe 3s ease-in-out infinite;
+}
+
+@keyframes radial-beam {
+  0% {
+    transform: rotate(0deg) scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: rotate(360deg) scaleY(1);
+    opacity: 0;
+  }
+}
+
+.radial-light {
+  animation: radial-beam 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.1;
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 0.3;
+    filter: blur(30px);
+  }
+}
+
+.shimmer-effect {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* 배경 효과 */
+.playing-bg {
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(239, 222, 156, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(239, 222, 156, 0.03) 0%, transparent 50%),
+    linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 50%, var(--darker-bg) 100%);
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.ambient-bg {
+  background: linear-gradient(
+    -45deg,
+    rgba(239, 222, 156, 0.02),
+    rgba(239, 222, 156, 0.05),
+    rgba(239, 222, 156, 0.02),
+    rgba(239, 222, 156, 0.05)
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* 미니멀 파티클 */
+@keyframes float-particle {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(var(--drift));
+    opacity: 0;
+  }
+}
+
+.minimal-particle {
+  animation: float-particle 12s linear infinite;
+}
+
+.simple-card {
+  background: var(--dark-bg);
+  border: 1px solid rgba(239, 222, 156, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.simple-card:hover {
+  border-color: rgba(239, 222, 156, 0.4);
+  box-shadow: 0 4px 25px rgba(239, 222, 156, 0.15);
+}
+
+.butter-gradient {
+  background: linear-gradient(135deg, #EFDE9C 0%, #f5e8b8 100%);
+}
+
+.butter-text {
+  color: var(--butter);
+}
+
+.simple-bg {
+  background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 50%, var(--darker-bg) 100%);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.icon-sm {
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+}
+
+.icon-lg {
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+}
